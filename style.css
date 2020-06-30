@@ -3,14 +3,14 @@ body {
   margin: 0;
 }
 
-.hero-container {
+.container {
   background-image: url("./assets/maclaptop.jpg");
   background-size: cover;
   height: 500px;
   background-repeat: round;
 }
 
-.hero-container .nav {
+.container .nav {
   padding: 30px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,19 +24,19 @@ body {
           justify-content: space-evenly;
 }
 
-.hero-container .nav a {
+.container .nav a {
   color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
 }
 
-.hero-container .nav a:hover {
+.container .nav a:hover {
   cursor: pointer;
   color: #45bfa4;
 }
 
-.hero-container h1 {
+.container h1 {
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -44,13 +44,13 @@ body {
   padding-top: 85px;
 }
 
-.hero-container h3 {
+.container h3 {
   text-align: center;
   color: white;
   margin-top: 15px;
 }
 
-.hero-container .icons-wrapper {
+.container .icons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,9 +63,18 @@ body {
           justify-content: center;
 }
 
-.hero-container .icons-wrapper img {
+.container .icons-wrapper img {
   width: 40px;
   margin: 0px 7px;
+}
+
+.container.footer {
+  background-image: url("./assets/footer-pic.jpg");
+  text-align: center;
+}
+
+.container.footer .btn {
+  margin-top: 30px;
 }
 
 .profile-pic {
@@ -77,10 +86,16 @@ body {
   width: 250px;
 }
 
+.title {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #45bfa4;
+}
+
 .about-me {
   background-color: #E6E6E6;
   text-align: center;
-  padding: 100px 55px 30px;
+  padding: 123px 55px 30px;
 }
 
 .about-me h3 {
@@ -90,5 +105,77 @@ body {
 
 .about-me p {
   line-height: 23px;
+}
+
+.section {
+  text-align: center;
+  background-color: white;
+  padding: 40px 50px;
+}
+
+.section.bg-gray {
+  background-color: #E6E6E6;
+}
+
+.section.bg-gray .btn-secondary {
+  background-color: white;
+}
+
+.section p {
+  margin: 40px 0;
+}
+
+.section .img-container {
+  margin: 40px 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.section .img-container img {
+  width: 260px;
+  margin: 8px;
+}
+
+.btn {
+  background-color: #45bfa4;
+  font-size: 15px;
+  padding: 10px 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 5px;
+  border-radius: 10px;
+  min-width: 100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #E6E6E6;
+}
+
+.btn-secondary a {
+  color: black;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 5px 5px #00000040;
+          box-shadow: 0 5px 5px #00000040;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 /*# sourceMappingURL=style.css.map */
