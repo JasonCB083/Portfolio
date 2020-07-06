@@ -77,6 +77,14 @@ body {
   margin-top: 30px;
 }
 
+.container.footer .portfolio {
+  color: white;
+}
+
+.container.footer .portfolio-link {
+  color: lightgray;
+}
+
 .profile-pic {
   text-align: center;
   margin: -127px 0px;
@@ -142,6 +150,17 @@ body {
 .section .img-container img {
   width: 260px;
   margin: 8px;
+  max-height: 500px;
+}
+
+@media (max-width: 577px) {
+  .section .img-container img {
+    width: 200px;
+    max-height: 350px;
+  }
+  .section .img-container img.screenshots {
+    display: none;
+  }
 }
 
 .btn {
@@ -150,7 +169,7 @@ body {
   padding: 10px 45px;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 0 5px;
+  margin: 5px;
   border-radius: 10px;
   min-width: 100px;
   -webkit-transition: all 0.3s;
