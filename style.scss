@@ -1,9 +1,19 @@
 $green: #45bfa4;
 $gray: #E6E6E6;
 
+:root{
+  --dark: #212121;
+  --dark-trasparent: #000000d0;
+  --light: #cccccc;
+  --light-trasparent: #ffffff90;
+
+  --transition-duration: 0.5s;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  color: var(--light);
 }
 
 .container {
@@ -19,7 +29,7 @@ body {
     justify-content: space-evenly;
 
     a {
-      color: white;
+      color: var(--light);
       text-decoration: none;
       font-size: 20px;
       font-weight: 500;
@@ -33,7 +43,7 @@ body {
 
   h1 {
     text-align: center;
-    color: white;
+    color: var(--light);
     text-transform: uppercase;
     margin: 0;
     padding-top: 85px;
@@ -41,7 +51,7 @@ body {
 
   h3 {
     text-align: center;
-    color: white;
+    color: var(--light);
     margin-top: 15px;
   }
 
@@ -65,11 +75,12 @@ body {
     }
 
     .portfolio {
-      color:white;
+      color: var--(--dark);
+
     }
 
     .portfolio-link{
-      color: lightgray;
+      color: var--(--dark);
     }
   }
 }
@@ -90,10 +101,10 @@ body {
 }
 
 .about-me {
-  background-color: $gray;
+  background-color: var(--dark);
   text-align: center;
   padding: 123px 55px 30px;
-
+  color: var(--light)
   h3 {
     color: $green;
     margin-top: 45px;
@@ -106,8 +117,10 @@ body {
 
 .section {
   text-align: center;
-  background-color: white;
+  background-color: var(--dark-trasparent);
   padding: 40px 50px;
+  color: var(--light);
+
 
   &.bg-gray{
     background-color: $gray;
@@ -143,6 +156,7 @@ body {
       }
     }
   }
+
 }
 
 .btn {
@@ -176,3 +190,5 @@ body {
     transform: translateY(-5px);
   }
 }
+
+
