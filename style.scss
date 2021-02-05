@@ -4,16 +4,19 @@ $gray: #E6E6E6;
 :root{
   --dark: #212121;
   --dark-trasparent: #000000d0;
+  --dark-greeen: #3a4a4975;
+
   --light: #cccccc;
   --light-trasparent: #ffffff90;
-
-  --transition-duration: 0.5s;
+  --light-gray: #E6E6E6;
+  --transition-duration: 1.0s;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: var(--light);
+  transition: color var(--transition-duration);
 }
 
 .container {
@@ -21,6 +24,8 @@ body {
   background-size: cover;
   height: 500px;
   background-repeat: round;
+  transition: color var(--transition-duration);
+
 
   .nav {
     padding: 30px 20px;
@@ -39,6 +44,47 @@ body {
         color: $green;
       }
     }
+
+
+
+    #mode-btn- {
+      -webkit-appearance: none;
+      position: relative;
+      width: 100px;
+      height: 50px;
+      border-radius: 50px;
+      outline: none;
+      background-image: url('https://storage.needpix.com/rsynced_images/summer-day-135826474849f.jpg');
+      background-size: cover;
+      background-position-y: -10px;
+      transition: background-image 0.7s;
+      border: none;
+      box-shadow: 3px 3px 10px #aaaaaa;
+
+      &:before {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: #ffff4d;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.7s;
+      }
+
+      &:checked {
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844231_960_720.png');
+        background-position-y: -5px;
+        transition: background-image 0.7s;
+      }
+
+      &:checked:before {
+        background-color: #d9e1e6;
+        transform: translate(100%);
+        transition: all 0.7s;
+      }
+
   }
 
   h1 {
@@ -76,11 +122,18 @@ body {
 
     .portfolio {
       color: var--(--dark);
-
     }
 
     .portfolio-link{
-      color: var--(--dark);
+      color: var(--light-trasparent);
+    }
+
+    a{
+      color: var--(--light-trasparent);
+    }
+
+    h6 {
+      color: var(--light-trasparent);
     }
   }
 }
@@ -104,7 +157,10 @@ body {
   background-color: var(--dark);
   text-align: center;
   padding: 123px 55px 30px;
-  color: var(--light)
+  color: var(--light);
+  transition: background-color var(--transition-duration);
+
+
   h3 {
     color: $green;
     margin-top: 45px;
@@ -120,13 +176,14 @@ body {
   background-color: var(--dark-trasparent);
   padding: 40px 50px;
   color: var(--light);
+  transition: background-color var(--transition-duration);
 
 
   &.bg-gray{
-    background-color: $gray;
+    background-color: var(--dark);
 
     .btn-secondary{
-      background-color: white;
+      background-color: var(--dark-greeen);
     }
   }
 
@@ -171,6 +228,7 @@ body {
   transition: all 0.3s;
   border: none;
   outline: none;
+  transition: background-color var(--transition-duration);
 
   a {
     text-decoration: none;
@@ -178,10 +236,10 @@ body {
   }
 
   &-secondary{
-    background-color: $gray ;
+    background-color: var(--dark) ;
 
     a {
-      color: black;
+      color: var(--light);
     }
   }
 
@@ -192,3 +250,46 @@ body {
 }
 
 
+
+
+
+
+
+body.light .container,
+body.light .about-me {
+  background-color: var(--light-trasparent);
+  color: var(--dark)
+}
+
+body.light .section {
+  background-color: var(--light-gray);
+  color: var(--dark);
+}
+
+body.light .btn.btn-secondary {
+  background-color: var(--dark-greeen);
+}
+
+body.light .btn a {
+  color: white;
+}
+
+body.light .section.bg-gray{
+  background-color: var(--light-trasparent);
+}
+
+body.light .container .nav a {
+  color: white;
+}
+
+body.light .container h1,
+body.light .container h3{
+  color: white;
+}
+
+body.light footer h1,
+body.light footer h3,
+body.light .container.footer h6,
+body.light .container.footer .portfolio-link{
+  color: white;
+}
