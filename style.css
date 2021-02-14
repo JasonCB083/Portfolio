@@ -8,6 +8,13 @@
   --transition-duration: 1.0s;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -51,8 +58,72 @@ body {
   color: #45bfa4;
 }
 
-.container .nav #mode-btn2 {
-  color: yellow;
+.container .toggle {
+  /*.label{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+      background: var(--light-gray);
+      border-radius: 3rem;
+      padding: .2rem;
+      width: 3.1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1;
+      transition: background 0.5s ease;
+    }*/
+}
+
+.container .toggle .checkbox {
+  display: none;
+}
+
+.container .toggle .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  background: var(--light-gray);
+  border-radius: 3rem;
+  padding: .2rem;
+  width: 3.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.container .toggle .content .ball {
+  position: absolute;
+  top: 0.02rem;
+  left: -0.6rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  background: var(--dark);
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: background 0.5s ease, -webkit-transform 0.3s ease;
+  transition: background 0.5s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.5s ease;
+  transition: transform 0.3s ease, background 0.5s ease, -webkit-transform 0.3s ease;
+}
+
+.container .toggle .checkbox:checked + .content .label .ball {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+}
+
+.container .toggle i {
+  font-size: 1.2rem;
 }
 
 .container h1 {

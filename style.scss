@@ -5,11 +5,15 @@ $gray: #E6E6E6;
   --dark: #212121;
   --dark-trasparent: #000000d0;
   --dark-greeen: #3a4a4975;
-
   --light: #cccccc;
   --light-trasparent: #ffffff90;
   --light-gray: #E6E6E6;
   --transition-duration: 1.0s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,48 +48,66 @@ body {
         color: $green;
       }
     }
+  }
+
+  .toggle{
+
+    .checkbox{
+      display: none;
+    }
 
 
-
-    #mode-btn- {
-      -webkit-appearance: none;
+    .content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: relative;
-      width: 100px;
-      height: 50px;
-      border-radius: 50px;
-      outline: none;
-      background-image: url('https://storage.needpix.com/rsynced_images/summer-day-135826474849f.jpg');
-      background-size: cover;
-      background-position-y: -10px;
-      transition: background-image 0.7s;
-      border: none;
-      box-shadow: 3px 3px 10px #aaaaaa;
+      background: var(--light-gray);
+      border-radius: 3rem;
+      padding: .2rem;
+      width: 3.1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1;
+      transition: background 0.5s ease;
+    }
+    /*.label{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+      background: var(--light-gray);
+      border-radius: 3rem;
+      padding: .2rem;
+      width: 3.1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1;
+      transition: background 0.5s ease;
+    }*/
 
-      &:before {
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        background-color: #ffff4d;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all 0.7s;
-      }
+    .content .ball{
+      position: absolute;
+      top: 0.02rem;
+      left: -0.6rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      background: var(--dark);
+      border-radius: 50%;
+      transform: translateX(0);
+      transition: transform 0.3s ease, background 0.5s ease;
+    }
 
-      &:checked {
-        background-image: url('https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844231_960_720.png');
-        background-position-y: -5px;
-        transition: background-image 0.7s;
-      }
+    .checkbox:checked + .content .label .ball{
+      transform: translateX(2rem);
+    }
 
-      &:checked:before {
-        background-color: #d9e1e6;
-        transform: translate(100%);
-        transition: all 0.7s;
-      }
+    i {
+      font-size: 1.2rem;
+    }
 
   }
+
 
   h1 {
     text-align: center;
@@ -248,12 +270,6 @@ body {
     transform: translateY(-5px);
   }
 }
-
-
-
-
-
-
 
 body.light .container,
 body.light .about-me {
